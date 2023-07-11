@@ -8,10 +8,10 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
   Test:
     runs-on: ubuntu-latest
-    timeout-minutes: 1
+    timeout-minutes: 2
     steps:
       - run: echo "Performing Unit tests"
-      - run: echo "🎉 All tests passed"
+      - run: exit 1
 
   Deploy_staging:
     runs-on: ubuntu-latest
